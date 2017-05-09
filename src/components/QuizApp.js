@@ -65,8 +65,11 @@ class QuizApp extends Component {
         document.querySelector('.bonus').classList.add('show');
 
       }, 250);
-
-      setTimeout(this.nextStep, 1500);
+			
+			var self = this;
+      setTimeout(function(){
+				self.nextStep(true);
+			}, 1500);
 
     } else {
 
@@ -93,13 +96,16 @@ class QuizApp extends Component {
 					document.querySelector('.correct-modal').classList.add('wrong-answer');
 					document.querySelector('.bonus').classList.add('show');
 
-					setTimeout(this.nextStep, 1500);
+					var self = this;
+					setTimeout(function() {
+						self.nextStep(false);
+					}, 1500);
 				}, 250);
 			}
     }
   }
 
-  nextStep() {
+  nextStep(addScore) {
     document.querySelector('.correct-modal').classList.remove('modal-enter');
     document.querySelector('.bonus').classList.remove('show');
     const { questions, userAnswers, step, score } = this.state;
@@ -110,10 +116,11 @@ class QuizApp extends Component {
     this.setState({
       step: step + 1,
       score: (() => {
-        if (tries === 1) return score + 10;
-        if (tries === 2) return score + 5;
-        if (tries === 3) return score + 2;
-        return score + 1;
+				if (addScore) {
+					if (tries === 1) return score + 10;
+					if (tries === 2) return score + 5;
+				}
+				return score;
       })(),
       questions: restOfQuestions
     });
