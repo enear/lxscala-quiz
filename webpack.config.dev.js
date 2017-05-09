@@ -38,15 +38,7 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       }
-		],
-    rules: [
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      }
-    ]
+		]
 	},
 	resolve: {
 		extensions: ['', '.js', '.jsx']
