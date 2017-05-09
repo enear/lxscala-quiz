@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 9px;
   background-image: url("http://www.enear.co/wp-content/uploads/2017/04/hero2.jpg");
+	background-size: cover;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -117,12 +118,12 @@ header {
   top: -2px;
 }
 .wrong {
-  color: #333;
+  color: #a9a9a9;
   background: rgba(236,100,75,.5);
   animation: shake 0.5s cubic-bezier(.35,.05,.20,.99) both;
 }
 .right {
-  background: rgba(135,211,124,.5);
+  background: rgba(94, 216, 76, 0.5);
 }
 @keyframes shake {
   10%, 90% {
@@ -162,6 +163,9 @@ header {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   display: none;
+}
+.correct-modal.wrong-answer {
+  background: rgb(246, 82, 52);
 }
 .correct-modal.modal-enter {
   display: flex;
@@ -220,7 +224,8 @@ header {
     width: 75%;
   }
   .question-answer:hover {
-    border-color: rgba(0,0,0,.5);
+    /*border-color: rgba(0,0,0,.5);*/
+		border-color: rgb(246, 82, 52);
   }
   .correct-modal {
     height: 300px;

@@ -55,20 +55,13 @@ class QuizApp extends Component {
           praise.textContent = '1st Try!';
           bonus.textContent = '+10';
         }
-        if (tries === 1) {
+        else if (tries === 1) {
           praise.textContent = '2nd Try!';
           bonus.textContent = '+5';
         }
-        if (tries === 2) {
-          praise.textContent = 'Correct!';
-          bonus.textContent = '+2';
-        }
-        if (tries === 3) {
-          praise.textContent = 'Correct!';
-          bonus.textContent = '+1';
-        }
-
+       
         document.querySelector('.correct-modal').classList.add('modal-enter');
+				document.querySelector('.correct-modal').classList.remove('wrong-answer');
         document.querySelector('.bonus').classList.add('show');
 
       }, 250);
@@ -87,7 +80,22 @@ class QuizApp extends Component {
       this.setState({
         userAnswers: answersFromUser
       });
+			
+			if (answersFromUser[currentStep].tries === 2) {
+				setTimeout(() => {
+					const praise = document.querySelector('.praise');
+					const bonus = document.querySelector('.bonus');
+					
+					praise.textContent = 'Wrong!';
+					bonus.textContent = '';
 
+					document.querySelector('.correct-modal').classList.add('modal-enter');
+					document.querySelector('.correct-modal').classList.add('wrong-answer');
+					document.querySelector('.bonus').classList.add('show');
+
+					setTimeout(this.nextStep, 1500);
+				}, 250);
+			}
     }
   }
 
