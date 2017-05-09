@@ -7,7 +7,7 @@ const Question = ({ question, image, answers, handleAnswerClick }) => {
       <h2 className="question-title">
         {question}
       </h2>
-      {image ? <img src={`/${image}`}/> : ""}
+      {image ? <img src={`/question-img/${image}`}/> : ""}
       <ol className="question-answers">
         {answers.map(answer => {
           return (
