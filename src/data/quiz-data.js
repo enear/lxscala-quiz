@@ -88,5 +88,35 @@ export const questions = [
       "Success(java.lang.Exception)"
     ],
     "correct": 2
+  },
+  {
+    "question": "As of Scala 2.12, what should be the signature of f in the following piece of code?",
+    "image":"q10.png",
+    "answers": [
+      "HTTPError => Int",
+      "Json => Int",
+      "Json => Either[HTTPError, Int]"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Seq[T] is a subtype of (Int => T); Map[K,V] is a subtype of (K => V). Which of these is a supertype of Set[T]?",
+    "image":"",
+    "answers": [
+      "(Int => T)",
+      "(T => Int)",
+      "(T => Boolean)"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the result of the following expression?",
+    "image":"q11.png",
+    "answers": [
+      "true",
+      "false",
+      "Compilation error"
+    ],
+    "correct": 0
   }
 ]
