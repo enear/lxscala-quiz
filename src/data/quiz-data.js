@@ -100,7 +100,7 @@ export const questions = [
     "correct": 1
   },
   {
-    "question": "Seq[T] is a subtype of (Int => T); Map[K,V] is a subtype of (K => V). Which of these is a supertype of Set[T]?",
+    "question": "Seq[T] is a subtype of (Int => T) and Map[K,V] is a subtype of (K => V). Which of these is a supertype of Set[T]?",
     "image":"",
     "answers": [
       "(Int => T)",
