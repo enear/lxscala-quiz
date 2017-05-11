@@ -43,8 +43,8 @@ export const questions = [
     "question": "What is true regarding the following definition?",
     "image":"q5.png",
     "answers": [
-      "Encode[Any] is a subtype of encoder[SString]",
-      "Encoder[Int] is a subtype of Ecoder[Anyval]",
+      "Encoder[Any] is a subtype of Encoder[String]",
+      "Encoder[Int] is a subtype of Encoder[AnyVal]",
       "Encoder[String] is a subtype of Encoder[Any]"
     ],
     "correct": 0
