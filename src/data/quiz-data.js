@@ -43,8 +43,8 @@ export const questions = [
     "question": "What is true regarding the following definition?",
     "image":"q5.png",
     "answers": [
-      "Encode[Any] is a subtype of encoder[SString]",
-      "Encoder[Int] is a subtype of Ecoder[Anyval]",
+      "Encoder[Any] is a subtype of Encoder[String]",
+      "Encoder[Int] is a subtype of Encoder[AnyVal]",
       "Encoder[String] is a subtype of Encoder[Any]"
     ],
     "correct": 0
@@ -88,5 +88,35 @@ export const questions = [
       "Success(java.lang.Exception)"
     ],
     "correct": 2
+  },
+  {
+    "question": "As of Scala 2.12, what should be the signature of f in the following piece of code?",
+    "image":"q10.png",
+    "answers": [
+      "HTTPError => Int",
+      "Json => Int",
+      "Json => Either[HTTPError, Int]"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Seq[T] is a subtype of (Int => T) and Map[K,V] is a subtype of (K => V). Which of these is a supertype of Set[T]?",
+    "image":"",
+    "answers": [
+      "(Int => T)",
+      "(T => Int)",
+      "(T => Boolean)"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the result of the following expression?",
+    "image":"q11.png",
+    "answers": [
+      "true",
+      "false",
+      "Compilation error"
+    ],
+    "correct": 0
   }
 ]
