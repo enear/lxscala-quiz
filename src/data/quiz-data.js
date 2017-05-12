@@ -34,7 +34,7 @@ export const questions = [
     "image":"q4.png",
     "answers": [
       "Type Member",
-      "Abstract type",
+      "Type constructor",
       "Path dependent type"
     ],
     "correct": 2
